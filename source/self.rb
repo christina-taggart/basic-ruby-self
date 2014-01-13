@@ -19,17 +19,24 @@ end
 
 ## Write your driver code to run both methods above here:
 
+me = Person.new
+Person.example_class_method
+
+me.example_instance_method
+
 ## MODULE CONTEXT
 ## The following are identical.  Comment each out separately and write the driver code to run the hypot method
 
+# module Math
+#   def self.hypot(a, b)
+#   Math.sqrt(a * a + b * b)
+#   end
+# end
+
 module Math
-  def self.hypot(a, b)
-  # maths in here
+  def Math.hypot(a, b)
+    Math.sqrt(a * a + b * b)
   end
 end
 
-# module Math
-#   def Math.hypot(a, b)
-#     # maths in here
-#   end
-# end
+p Math.hypot(3,4) == 5
