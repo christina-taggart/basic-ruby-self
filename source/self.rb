@@ -18,13 +18,18 @@ class Person
 end
 
 ## Write your driver code to run both methods above here:
+emily = Person.new
+p Person.example_class_method
+p emily.example_instance_method
 
 ## MODULE CONTEXT
 ## The following are identical.  Comment each out separately and write the driver code to run the hypot method
 
 module Math
   def self.hypot(a, b)
-  # maths in here
+  c = a**2 + b**2
+  hypotenuse = Math.sqrt(c)
+  hypotenuse
   end
 end
 
@@ -33,3 +38,10 @@ end
 #     # maths in here
 #   end
 # end
+
+p Math.hypot(3,4) == 5
+
+# HELLO GRANDMA! SELF IS A KIND OF PLACEHOLDER REFERRING TO THE CURRENT CLASS OR MODULE THAT
+# YOU ARE WORKING WITH. THE METHOD USING MATH UP TOP IS A GOOD EXAMPLE. MATH WASN'T PART OF
+# THE METHOD YET, SO WE ADDED IT WITH SELF AS A PLACEHOLDER.
+# BYE GRANDMA
