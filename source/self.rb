@@ -1,3 +1,11 @@
+=begin------DEFINITION OF SELF-----
+
+self is a quick way of referring to the object (whether it be an instance, class, or module)
+Ruby is currently working inside of. We can also call this the "context." self allows a programmer
+to quickly refer to the current context without having to know its specific name. It also
+allows a programmer to define class methods by prefixing a method definition with self.
+
+=end
 
 ## CLASS CONTEXT
 
@@ -22,14 +30,23 @@ end
 ## MODULE CONTEXT
 ## The following are identical.  Comment each out separately and write the driver code to run the hypot method
 
+# module Math
+#   def self.hypot(a, b)
+#   ((a**2 + b**2)**0.5).to_i
+#   end
+# end
+
 module Math
-  def self.hypot(a, b)
-  # maths in here
+  def Math.hypot(a, b)
+    ((a**2 + b**2)**0.5).to_i
   end
 end
 
-# module Math
-#   def Math.hypot(a, b)
-#     # maths in here
-#   end
-# end
+
+#-----DRIVERS-----
+me = Person.new
+Person.example_class_method
+puts "----"
+me.example_instance_method
+
+puts Math.hypot(3, 4)
