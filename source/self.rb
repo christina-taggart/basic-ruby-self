@@ -47,3 +47,9 @@ Math::hypot(1,2)
 puts "Calling by Math2.hypot"
 Math2::hypot(3,4)
 
+# Write up
+
+# Self accesses the larger context in which the block of code is contained.
+# For example, a instance method that contains self in it will access the instance
+# variable in which it is running the command. A method defined with self, allows
+# it be called by the class name.
