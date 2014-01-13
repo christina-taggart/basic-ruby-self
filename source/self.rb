@@ -40,3 +40,12 @@ module Math
 end
 
 p Math.hypot(3,4) == 5
+
+=begin
+
+self is a keyword used to establish what you are currently working on.  Often self is an unneccasary addition as it is implied,
+but can be useful if you want to use the class itself as a variable call.  This will make it able to used without creating a new instance of the class.
+this is why we can call Math.sqrt on numbers without having to create a new Math class instance variable.  It can be very useful for methods
+that we want to use on data often.
+
+end
