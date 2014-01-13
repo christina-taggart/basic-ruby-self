@@ -7,6 +7,7 @@ class Person
     puts "'self' is always defined.  What is 'self' here?  Let's see."
     p self
     puts "That was self!"
+    self
   end
 
   def example_instance_method
@@ -14,11 +15,14 @@ class Person
     puts "'self' is defined here, too, but it means something different."
     p self
     puts "That was self, again, but see how it's an instance of the class."
+    self
   end
 end
 
 ## Write your driver code to run both methods above here:
-
+person = Person.new
+p Person.example_class_method == Person
+p person.example_instance_method == person
 ## MODULE CONTEXT
 ## The following are identical.  Comment each out separately and write the driver code to run the hypot method
 
