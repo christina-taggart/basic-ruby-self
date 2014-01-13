@@ -18,18 +18,33 @@ class Person
 end
 
 ## Write your driver code to run both methods above here:
+# Person.example_class_method
+# person = Person.new
+# person.example_instance_method
 
 ## MODULE CONTEXT
 ## The following are identical.  Comment each out separately and write the driver code to run the hypot method
 
+# module Math
+#   def self.hypot(a, b)
+#   # maths in here
+#   sqrt(a**2 + b**2)
+#   end
+# end
+
+p Math.hypot(3,4) == 5
+
 module Math
-  def self.hypot(a, b)
-  # maths in here
+  def Math.hypot(a, b)
+    # maths in here
+  sqrt(a**2 + b**2)
   end
 end
 
-# module Math
-#   def Math.hypot(a, b)
-#     # maths in here
-#   end
-# end
+p Math.hypot(3,4) == 5
+
+=begin
+Self refers to the context that a method is working in. In an instance method, it refers to the instance
+that the instance method was called on. In a class or module method, it would refer to the class
+or the module.
+=end
